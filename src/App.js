@@ -6,7 +6,7 @@ function App() {
     const [response, setResponse] = useState(null);
     const [selectedOptions, setSelectedOptions] = useState([]);
 
-    const filters = ['Numbers', 'Alphabets', 'Highest Alphabet']; // Filters available
+    const filters = ['Numbers', 'Alphabets', 'Highest Lowercase Alphabet']; // Updated filter name
 
     const handleJsonInput = (e) => {
         setJsonInput(e.target.value);
@@ -55,7 +55,7 @@ function App() {
         const displayData = {};
         if (selectedOptions.includes('Numbers')) displayData.numbers = response.numbers;
         if (selectedOptions.includes('Alphabets')) displayData.alphabets = response.alphabets;
-        if (selectedOptions.includes('Highest Alphabet')) displayData.highest_alphabet = response.highest_alphabet;
+        if (selectedOptions.includes('Highest Lowercase Alphabet')) displayData.highest_lowercase_alphabet = response.highest_lowercase_alphabet; // Corrected the field
 
         return (
             <div>
